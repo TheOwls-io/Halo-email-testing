@@ -1,0 +1,596 @@
+
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'event': 'braze_experiment',
+ 'testname': 'dev-aa-experiment',
+  'variant': 'control',
+ });
+ console.log("I am a wild braze party in control");
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<div id="brazeSurvey">
+  <div id="brazeOuterShell">
+    <button id="brazeCloseBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="348.333" height="348.333" viewBox="0 0 348.333 348.334"><path fill="#565656" d="M336.559 68.611L231.016 174.165l105.543 105.549c15.699 15.705 15.699 41.145 0 56.85-7.844 7.844-18.128 11.769-28.407 11.769-10.296 0-20.581-3.919-28.419-11.769L174.167 231.003 68.609 336.563c-7.843 7.844-18.128 11.769-28.416 11.769-10.285 0-20.563-3.919-28.413-11.769-15.699-15.698-15.699-41.139 0-56.85l105.54-105.549L11.774 68.611c-15.699-15.699-15.699-41.145 0-56.844 15.696-15.687 41.127-15.687 56.829 0l105.563 105.554L279.721 11.767c15.705-15.687 41.139-15.687 56.832 0 15.705 15.699 15.705 41.145.006 56.844z"/></svg></button>
+        <div id="braze-stage-1" class="braze-stage active">
+          <h2>Unlock an exclusive offer: </h2>
+          <p>Choose a pup</p>
+          <div style="display:flex;">
+              <div id="choice2" data-id="dog2" class="choice square bubble" style="">
+                  <div class="image"></div>
+                  <svg height="100%" viewBox="0 0 90 90" width="100%" style="overflow: visible;">
+                  <circle class="progress-bar" cx="50%" cy="50%" fill="none" stroke-width="2" r="40" stroke="#2f93f3" style="stroke-dashoffset: 251.3274; stroke-dasharray: 251.3274;"></circle>
+                  </svg>
+              </div>
+              <div id="choice1" data-id="dog1" class="choice square bubble" style="">
+                  <div class="image"></div>
+                  <svg height="100%" viewBox="0 0 90 90" width="100%" style="overflow: visible;">
+                  <circle class="progress-bar" cx="50%" cy="50%" fill="none" stroke-width="2" r="40" stroke="#2f93f3" style="stroke-dashoffset: 251.3274; stroke-dasharray: 251.3274;"></circle>
+                  </svg>
+              </div>
+              <div id="choice3" data-id="dog3" class="smoke-testV0 choice square bubble" style="">
+                  <div class="image"></div>
+                  <svg height="100%" viewBox="0 0 90 90" width="100%" style="overflow: visible;">
+                  <circle class="progress-bar" cx="50%" cy="50%" fill="none" stroke-width="2" r="40" stroke="#2f93f3" style="stroke-dashoffset: 251.3274; stroke-dasharray: 251.3274;"></circle>
+                  </svg>
+              </div>
+          </div>
+          <button id="noThanks" class="text-btn">No thanks</button>
+        </div>
+    
+    <div id="braze-stage-2" class="braze-stage">
+        <div class="chosen-screen" style="display:flex;">
+            <div>
+                <div>
+                  <div class="pre-headline">You've unlocked</div>
+                  <h2>$25 off <span style="color: #2f93f3;">Halo Collar 3</span></h2>
+                </div>
+                <div class="form active">
+                  <form>
+                      <label>Enter your email to receive your offer</label>
+                      <input id="brazeChoiceEmail" type="email" name="email" placeholder="Email Address">
+                      <div class="errorMessage">Not a valid email address</div>
+                      <button id="brazeChoiceBtn1">Unlock $25 off</button>
+                  </form>
+                  <button id="noThanks2" class="text-btn" style="display:block;margin: 1rem auto;text-align:center;">No Thanks</button>
+                  <a id="terms" href="https://www.halocollar.com/unified-terms-and-conditions/#Agreement-to-terms" style="text-align:center;">See Terms</a>
+                </div>
+            </div>
+            <div class="target"></div>
+        </div>
+    </div>
+
+    <div id="braze-stage-3" class="braze-stage">
+      <div class="chosen-screen" style="display:flex;">
+          <div>
+              <div>
+                <div class="pre-headline">You've unlocked</div>
+                <h2>$25 off <span style="color: #2f93f3;">Halo Collar 3</span></h2>
+              </div>
+              <div class="form active">
+                <form>
+                    <label>Enter your phone number to receive your offer</label>
+                    <input id="brazeChoicePhone" type="text" name="email" placeholder="Mobile phone number">
+                    <div class="errorMessage">Not a valid phone number</div>
+                    <button id="brazeChoiceBtn2"> <div><svg width="23" height="36" viewBox="0 0 23 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.7532 0.297363H5.74035C3.10092 0.297363 0.952148 2.44721 0.952148 5.08796V30.4629C0.952148 33.1036 3.10092 35.2535 5.74035 35.2535H17.7532C20.3926 35.2535 22.5414 33.1036 22.5414 30.4629V5.08796C22.5414 2.44721 20.3926 0.297363 17.7532 0.297363ZM20.1219 30.4629C20.1219 31.7663 19.0559 32.8328 17.7532 32.8328H5.74035C4.43755 32.8328 3.37163 31.7663 3.37163 30.4629V5.08796C3.37163 3.78451 4.43755 2.71805 5.74035 2.71805H17.7532C19.0559 2.71805 20.1219 3.78451 20.1219 5.08796V30.4629Z" fill="#2B2B2B"/>
+                      <path d="M7.09393 7.42395H16.3827C17.0595 7.42395 17.6009 6.88225 17.6009 6.20514C17.6009 5.52802 17.0595 4.98633 16.3827 4.98633H7.09393C6.41715 4.98633 5.87573 5.52802 5.87573 6.20514C5.87573 6.88225 6.41715 7.42395 7.09393 7.42395Z" fill="#2B2B2B"/>
+                      </svg>
+                      </div><div>Unlock $25 off <span>by signing up for texts*</span></div></button>
+                </form>
+                <button id="noThanks3" class="text-btn" style="display:block;margin: 1rem auto;text-align:center;">No Thanks</button>
+                <div style="color:#B3B3B3;font-size:8px;">*By signing up for texts, you agree to receive automated recurring marketing messages (including cart reminders) from Halo Collar. You also accept the Terms & Privacy. Consent is not a condition of purchase. Msg frequency varies. Msg & data rates may apply. Text STOP to unsubscribe.</div>
+                <a id="terms" href="https://www.halocollar.com/unified-terms-and-conditions/#Agreement-to-terms" style="text-align:center;">See Terms</a>
+              </div>
+              <div class="success">
+                <div class="success-cta">Use code</div>
+                <div class="success-coupon">HALO25</div>
+                <div class="success-instruction">at checkout today to receive $25 off a Halo Collar 3</div>
+                <a href="https://www.halocollar.com/shop-wireless-dog-fence/" style="text-align:center;"><button>Shop now</button></a>
+              </div>
+          </div>
+          <div class="target"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="brazeBackground"></div>
+</div>
+
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+      font-family: 'Inter';
+      color: #424242;
+      margin: 0;
+      padding: 0;
+    }
+    #brazeSurvey{
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    #brazeBackground{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.5);
+      z-index: 1;
+    }
+    #brazeOuterShell{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      border: 1px solid #eee;
+      box-shadow: 0px 0px 10px rgba(0,0,0,.25);
+      width: 90%;
+      max-width: 800px;
+      height: 575px;
+      border-radius: 20px;
+      margin: 0 auto;
+      background: #fff;
+      overflow:hidden;
+      max-height: 100vh;
+    }
+    #brazeCloseBtn{
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      margin-right: auto;
+      background: 0;
+      border: 0;
+      cursor: pointer;
+      z-index: 10;
+    }
+    #terms{
+        display:block;
+        margin-top: 3rem;
+        font-size: 12px;
+        color: #424242;
+    }
+    #brazeCloseBtn svg{
+      width: 16px;
+      height: 16px;
+    }
+    .pre-headline{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    h2{
+        font-size: 44px;
+        line-height: 1.1;
+        margin: 0 0 2rem;
+    }
+    h2 span{
+        display: block;
+    }
+
+    #braze-stage-1{
+      text-align:center;
+      padding: 3rem;
+      margin-top:2rem;
+    }
+    #braze-stage-1 h2{
+      font-size: 40px
+    }
+    #braze-stage-1 p{
+      font-size: 20px;
+    }
+    h2, p, .choice:not(.active), .text-btn{
+        transition: opacity 1s, transform .5s;
+    }
+    .fade-out h2, .fade-out p, .fade-out .choice:not(.active), .fade-out .text-btn{
+        opacity: 0;
+    }
+    #braze-stage-2{
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    #braze-stage-2.fade-in{
+        opacity: 1;
+    }
+
+    #braze-stage-2 input, #braze-stage-3 input{
+      width: 100%;
+      max-width: 100%;
+      border: 1px solid #424242;
+      padding: .75rem;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+    #braze-stage-2 form > button, #braze-stage-3 form > button, .success button{
+      max-width: 100%;
+      /* padding: 1rem; */
+      height: 53px;
+      border: 0;
+      border-radius: 6px;
+      width: 100%;
+      background: #fccf2d;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .success button{
+      margin-top: 1rem;
+    }
+    .text-btn{
+      background-color: transparent;
+      border: 0;
+      text-decoration: underline;
+      padding: 0;
+    }
+    
+    #noThanks, #noThanks2{
+      font-size: 16px;
+      text-decoration: underline;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    .square{
+        position: relative;
+        aspect-ratio:1/1;
+        color: #fff;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 33.3%;
+        height: 33.3%;
+    }
+    .square > div{
+        position: absolute;
+        z-index: 2;
+        background-size: 120% 120%;
+        background-position: center center;
+        width: 80%;
+        height: 80%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+    }
+    .square > svg{
+        position: absolute;
+        width: 95%;
+        height: 95%;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        transform: rotate(-90deg) translate(50%, -50%);
+    }
+    #choice1 > div{
+        
+      background-image: url('dog1.png');
+    }
+    #choice2 > div{
+      background-image: url('dog2.png');
+    }
+    #choice3 > div{
+      background-image: url('dog3.png');
+    }
+
+    .target.dog1{
+      background-image: url('shep-grey.png');
+    }
+    .target.dog2{
+      background-image: url('lab-yellow.png');
+    }
+    .target.dog3{
+      background-image: url('small-pink.png');
+    }
+    .fill{
+        animation: right 1s linear both ;
+    }
+   
+    .bubble{
+        cursor: pointer;
+    }
+    .bubble:hover{
+        transform: scale(1.1);
+    }
+    .bubble.active{
+        transform: scale(1.1);
+    }
+    .target{
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .braze-stage{
+      display: none;
+      opacity: 0;
+    }
+    
+    .braze-stage.active{
+      display: block;
+      opacity:1;
+    }
+    .chosen-screen{
+      align-items: center;
+      height: 100%;
+    }
+    .chosen-screen > div{
+      width: 50%;
+      padding: 1rem;
+    }
+    .chosen-screen > div:nth-child(1){
+      padding: 3rem;
+    }
+    .chosen-screen input{
+      margin-bottom: .5rem;
+    }
+    
+    #brazeChoiceEmail.error,
+    #brazeChoicePhone.error{
+      border: 1px solid #f55b78;
+    }
+    .errorMessage{
+      display: none;
+      color: #f55b78;
+      font-size: 12px;
+      margin-bottom: .5rem;
+    }
+    #brazeChoiceEmail.error + .errorMessage,
+    #brazeChoicePhone.error + .errorMessage{
+      display: block;
+    }
+    
+    form label{
+        display: block;
+        margin-bottom: .5rem;
+    }
+    .form, .success{display:none;}
+    .form.active, .success.active{display:block;}
+    .success .success-coupon{
+      font-size: 65px;
+      font-weight: 700;
+      color: #2f93f3;
+    }
+
+    .success .success-coupon{
+      font-size: 48px;
+    }
+
+    .success .success-cta{
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+
+    #brazeChoiceBtn2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+    #brazeChoiceBtn2 svg{
+        margin-right: 10px;
+    }
+    #brazeChoiceBtn2 span{
+        display: block;
+        font-size: 12px;
+    }
+    
+    @media(max-width: 560px){
+        h2{
+            line-height: 1;
+        }
+        #braze-stage-3 h2{
+          margin-bottom:0;
+        }
+        #braze-stage-3 #terms {
+          margin-top: 1rem;
+        }
+        #braze-stage-1, .chosen-screen > div:nth-child(1){
+            padding: 1.5rem;
+        }
+        #braze-stage-1{
+            margin-top: 4rem;
+        }
+        .chosen-screen {
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        .chosen-screen > div{
+            width: 100%;
+        }
+        .chosen-screen > .target{
+            order: 1;
+            height: 142px;
+        }
+        .chosen-screen > div:nth-child(1){
+            order: 2;
+            width: 100%;
+        }
+        .target.dog1{
+            background-image: url('shep-grey-m.png');
+        }
+        .target.dog2{
+            background-image: url('lab-yellow-m.png');
+        }
+        .target.dog3{
+            background-image: url('small-pink-m.png');
+        }
+        .square > div{
+            width: 88%;
+            height: 88%;
+        }
+        .square > svg{
+            position: absolute;
+            width: 108%;
+            height: 108%;
+        }
+        .success .success-coupon{
+            font-size: 42px;
+        }
+    }
+    
+</style>
+
+<script>
+  function setChoice(dog){
+      document.querySelector('#braze-stage-2 .target').classList.add(dog);
+      document.querySelector('#braze-stage-3 .target').classList.add(dog);
+      document.querySelector('#braze-stage-1').classList.remove('active');
+      document.querySelector('#braze-stage-2').classList.add('active');
+      setTimeout(function(){document.querySelector('#braze-stage-2').classList.add('fade-in')}, 50);
+  }
+  var inputs = document.querySelectorAll(".choice");
+  for (i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener('click', function() {
+          progressBar = this.querySelector(".progress-bar");
+          startAnimation();
+          this.classList.add('active');
+          document.querySelector('#braze-stage-1').classList.add('fade-out');
+        let choice = this.getAttribute('data-id');
+        
+        setTimeout(setChoice, 1800, choice);
+        //brazeBridge.logClick(choice);
+      });
+  }
+  
+  // Wait for the `brazeBridge` ready event, "ab.BridgeReady"
+  window.addEventListener("ab.BridgeReady", function(){
+    // Event handler when the button is clicked
+    
+    document.querySelector("#brazeChoiceBtn1").onclick = function(e){
+      e.preventDefault();
+      brazeBridge.logClick("progress");
+      let emailAddress = document.querySelector('#brazeChoiceEmail').value;
+      if(!validateEmail(emailAddress)){
+        document.querySelector('#brazeChoiceEmail').classList.add('error');
+          return;
+      }else{
+        document.querySelector('#brazeChoiceEmail').classList.remove('error');
+      }
+      brazeBridge.getUser().setEmail(emailAddress);
+      brazeBridge.getUser().addAlias(emailAddress, 'email');
+      // Track a custom event
+      brazeBridge.logCustomEvent("halo_25_unlocked");
+      // Send the enqueued data to Braze
+      brazeBridge.requestImmediateDataFlush();
+      mergeEmail(emailAddress);
+      // Close this in-app message
+      //brazeBridge.closeMessage();
+      document.querySelector('#braze-stage-2').classList.remove('active');
+      document.querySelector('#braze-stage-3').classList.add('active');
+    };
+
+    document.querySelector("#brazeChoiceBtn2").onclick = function(e){
+      e.preventDefault();
+      brazeBridge.logClick("progress");
+      let phoneNumber = document.querySelector('#brazeChoicePhone').value;
+      if(!validatePhone(phoneNumber)){
+        document.querySelector('#brazeChoicePhone').classList.add('error');
+        return;
+      }else{
+        document.querySelector('#brazeChoicePhone').classList.remove('error');
+      }
+      brazeBridge.getUser().setPhoneNumber(phoneNumber);
+      brazeBridge.getUser().addAlias(phoneNumber, 'phone');
+      brazeBridge.getUser().addToSubscriptionGroup('4dcf7836-13c5-4967-99c6-259b9963dd2b');
+      brazeBridge.logCustomEvent("phone_number_submit");
+      
+      // Send the enqueued data to Braze
+      brazeBridge.requestImmediateDataFlush();
+      // Close this in-app message
+      //brazeBridge.closeMessage();
+      document.querySelector('#braze-stage-3 .form').classList.remove('active');
+      document.querySelector('#braze-stage-3 .success').classList.add('active');
+    };
+
+    document.querySelector("#brazeCloseBtn").onclick = function(e){
+      e.preventDefault();
+      brazeBridge.logClick("close");
+      brazeBridge.requestImmediateDataFlush();
+      brazeBridge.closeMessage();
+    };
+    document.querySelector("#noThanks").onclick = function(e){
+      e.preventDefault();
+      brazeBridge.logClick("close");
+      brazeBridge.requestImmediateDataFlush();
+      brazeBridge.closeMessage();
+    };
+    document.querySelector("#noThanks2").onclick = function(e){
+      e.preventDefault();
+      brazeBridge.logClick("close");
+      brazeBridge.requestImmediateDataFlush();
+      brazeBridge.closeMessage();
+    };
+    document.querySelector("#noThanks3").onclick = function(e){
+      e.preventDefault();
+      brazeBridge.logClick("close");
+      brazeBridge.requestImmediateDataFlush();
+      brazeBridge.closeMessage();
+    };
+    
+  }, false);
+
+  let progressElem = document.querySelector(".progress-elem");
+  let progressElemSvg = document.querySelector(".progress-elem svg");
+  let progressBar = document.querySelector(".progress-bar");
+  let success = document.querySelector(".success");
+
+  let interval;
+  function startAnimation () {
+    clearInterval(interval);
+    success.style.display = "none";
+    
+    let initial = 251.3274;
+    let increment = 251.3274 / 100;
+    let incrementCount = 0;
+    interval = setInterval(() => {
+      if (incrementCount === 100) {
+        initial = 0;
+        progressBar.style.strokeDashoffset = initial;
+        clearInterval(interval);
+        setTimeout(() => {
+          success.style.display = "";
+        }, 100);
+      } else {
+        initial -= increment;
+        progressBar.style.strokeDashoffset = initial;
+        incrementCount += 1;
+
+      }
+    }, 8);
+  }
+  
+  function validateEmail(email){
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+}
+
+function validatePhone(phone){
+  return phone.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
+}
+
+function mergeEmail(email){
+  let data = {}
+  let headers = {
+   "Content-Type": "application/json",       
+   "Access-Control-Origin": "*",
+   "Access-Control-Allow-Origin": "*"
+  }
+  
+  var formData = new FormData();
+  formData.append('email', email);
+  
+  fetch("https://halo.onitdigital.com/wp-json/braze/v1/merge-email", {
+    method: "POST",
+    body:  formData
+  })
+  .then(function(response){ 
+    return response.json(); 
+  })
+  .then(function(data){ 
+    //console.log(data)
+  });
+}
+</script>
