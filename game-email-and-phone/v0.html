@@ -1,12 +1,20 @@
-
 <script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
- 'event': 'braze_experiment',
- 'testname': 'dev-aa-experiment',
-  'variant': 'control',
- });
- console.log("I am a wild braze party in control");
+  function pollForDataLayer(cb, pollTime=0) {
+    if (window.dataLayer && typeof window.dataLayer === 'object') return cb();
+
+    if (pollTime >= 5000) return false;
+
+    let nextIteration = pollForDataLayer.bind(null, cb, pollTime + 50);
+    setTimeout(nextIteration, 50);
+  }
+  pollForDataLayer(() => {
+    window.dataLayer.push({
+      'event': 'braze_experiment',
+      'testname': 'dev-aa-experiment',
+      'variant': 'control',
+    });
+    console.log("I am a wild braze party in control");
+  });
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <div id="brazeSurvey">
