@@ -1,26 +1,22 @@
 <script>
   function pollForDataLayer(cb, pollTime=0) {
-    if (window.dataLayer && typeof window.dataLayer === 'object') return cb();
+    if (parent.dataLayer && typeof parent.dataLayer === 'object') return cb();
 
-    console.log('Test for window.braze', window.braze);
-
-    if (pollTime >= 5000) {
-        console.error('Data layer not found');
-        return false;
+    if (pollTime >= 10000) {
+      console.error('Data layer not found');
+      return false;
     }
 
     let nextIteration = pollForDataLayer.bind(null, cb, pollTime + 50);
     setTimeout(nextIteration, 50);
   }
-
-  console.log('Test for window.dataLayer', window.dataLayer);
+  console.log('Test for parent.dataLayer', parent.dataLayer);
   pollForDataLayer(() => {
-    window.dataLayer.push({
-      'event': 'braze_experiment',
-      'testname': 'dev-aa-experiment',
+    parent.dataLayer.push({
+      'event': 'braze-experiment-dev-aa-experiment',
       'variant': 'control',
     });
-    console.log("I am a wild braze party in control");
+
   });
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -449,8 +445,8 @@
 <script>
 function AmplitudetrackEmail() {
   const eventProperties = {
-    Path: window.location.pathname,
-    URL: parent.location,
+    Path: parent.location.pathname,
+    URL: parent.location.toString(),
   };
   parent.amplitude.track('Submit Email', eventProperties);
 }
