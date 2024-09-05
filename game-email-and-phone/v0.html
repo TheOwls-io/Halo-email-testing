@@ -446,6 +446,16 @@
     }
     
 </style>
+<script>
+function AmplitudetrackEmail() {
+  const eventProperties = {
+    Path: window.location.pathname,
+    URL: parent.location,
+  };
+  parent.amplitude.track('Submit Email', eventProperties);
+}
+</script>
+
 
 <script>
   function setChoice(dog){
@@ -510,7 +520,7 @@
       brazeBridge.getUser().addAlias(phoneNumber, 'phone');
       brazeBridge.getUser().addToSubscriptionGroup('4dcf7836-13c5-4967-99c6-259b9963dd2b');
       brazeBridge.logCustomEvent("phone_number_submit");
-      
+      AmplitudetrackEmail();
       // Send the enqueued data to Braze
       brazeBridge.requestImmediateDataFlush();
       // Close this in-app message
