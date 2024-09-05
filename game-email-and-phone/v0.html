@@ -2,11 +2,18 @@
   function pollForDataLayer(cb, pollTime=0) {
     if (window.dataLayer && typeof window.dataLayer === 'object') return cb();
 
-    if (pollTime >= 5000) return false;
+    console.log('Test for window.braze', window.braze);
+
+    if (pollTime >= 5000) {
+        console.error('Data layer not found');
+        return false;
+    }
 
     let nextIteration = pollForDataLayer.bind(null, cb, pollTime + 50);
     setTimeout(nextIteration, 50);
   }
+
+  console.log('Test for window.dataLayer', window.dataLayer);
   pollForDataLayer(() => {
     window.dataLayer.push({
       'event': 'braze_experiment',
