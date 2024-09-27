@@ -22,18 +22,17 @@
     console.log("I am a wild braze party in variation");
   });
   //delay for 10 second and show the .braze-v1-delay
+  //hide the .braze-v1-delay after 10 second
+  parent.document.querySelectorAll('.ab-in-app-message')[0].style.display = 'none';
+  parent.document.getElementsByTagName('body')[0].classList.remove('ab-pause-scrolling');
   setTimeout(function(){
-    document.getElementById('brazeSurvey').classList.remove('braze-v1-delay');
+    parent.document.querySelectorAll('.ab-in-app-message')[0].style.display = 'block';
+    parent.document.getElementsByTagName('body')[0].classList.add('ab-pause-scrolling');
     console.log('OWLS+BRAZE: v1-delayed+show');
   }, 10000);
 </script>
-<style>
-  .braze-v1-delay {
-    display: none;
-  }
-</style>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<div id="brazeSurvey" class="braze-v1-delay">
+<div id="brazeSurvey">
   <div id="brazeOuterShell">
     <button id="brazeCloseBtn">
       <svg xmlns="http://www.w3.org/2000/svg" width="348.333" height="348.333" viewBox="0 0 348.333 348.334">
